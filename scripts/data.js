@@ -5,6 +5,7 @@ export const posts = [
         img: "placeholder.jpg",
         tag: "tag-builds",
         description: "Some random description",
+        content: "foo",
     },
     {
         id: 2,
@@ -13,6 +14,7 @@ export const posts = [
         tag: "tag-raid-guides",
         description:
             "This one's gotta be longer vubky hhiaadulfd sgkhawufhbk sjaufhbkdj ufhvujod hfbvk uo",
+        content: "foo",
     },
     {
         id: 3,
@@ -21,6 +23,7 @@ export const posts = [
         tag: "tag-raid-guides",
         description:
             "This one's gotta be longer vubky hhiaadulfd sgkhawufhbk sjaufhbkdj ufhvujod hfbvk uo",
+        content: "foo",
     },
     {
         id: 4,
@@ -29,6 +32,7 @@ export const posts = [
         tag: "tag-raid-guides",
         description:
             "This one's gotta be longer vubky hhiaadulfd sgkhawufhbk sjaufhbkdj ufhvujod hfbvk uo",
+        content: "foo",
     },
     {
         id: 5,
@@ -37,6 +41,7 @@ export const posts = [
         tag: "tag-raid-guides",
         description:
             "This one's gotta be longer vubky hhiaadulfd sgkhawufhbk sjaufhbkdj ufhvujod hfbvk uo",
+        content: "foo",
     },
 ];
 

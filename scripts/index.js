@@ -9,7 +9,8 @@ function renderPosts() {
         const matchedTag = tags.find((tag) => tag.id === post.tag);
         const tagText = matchedTag ? matchedTag.text : post.tag;
 
-        const postHtml = `<div class="post ${post.tag}">
+        const postHtml = `<a href="../post.html?id=${post.id}">
+        <div class="post ${post.tag}">
             <div class="post-top-part">
                 <img
                     class="post-image"
@@ -23,7 +24,7 @@ function renderPosts() {
                 </button>
             </div>
             <div class="post-bottom-part">${post.description}</div>
-        </div>`;
+        </div></a>`;
 
         postContainer.insertAdjacentHTML("afterbegin", postHtml);
     });
