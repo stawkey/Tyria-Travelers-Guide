@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #880d03;
+    color: white;
+    padding: 0.4rem 0;
+}
+
+img {
+    vertical-align: middle;
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+h2 {
+    font-size: 1.25em;
+    margin: 0;
+}
+
+#nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    padding: 0.625rem 0.875rem 0.625rem 0.875rem;
+    gap: 0.625rem;
+}
+
+.tag {
+    height: 2rem;
+    padding: 0.3125rem 0.75rem;
+    border-radius: 2rem;
+    border: none;
+    font-size: 0.8rem;
+    background-color: rgb(74, 92, 255);
+    color: white;
+}
+
+.tag-active {
+    background-color: blueviolet;
+}
+
+#posts-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100vw;
+    gap: 20px;
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(51, 51, 51);
+    border-radius: 0.3125rem;
+    max-width: calc(33.33%);
+    width: 100%;
+}
+
+.post-image {
+    width: 100%;
+    border-radius: 0.3125rem;
+}
+
+.post-top-part {
+    position: relative;
+}
+
+.post-title {
+    position: absolute;
+    left: 0.5rem;
+    bottom: 0.5rem;
+    color: white;
+}
+
+.post-tag {
+    position: absolute;
+    right: 0.5rem;
+    bottom: 0.5rem;
+}
+
+.post-bottom-part {
+    position: static;
+    color: white;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 480px) {
+    .post {
+        max-width: 90vw;
+    }
+}
+
+@media (min-width: 481px) {
+    .post {
+        max-width: 300px;
+    }
+}
