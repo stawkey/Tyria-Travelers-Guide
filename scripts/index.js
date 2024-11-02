@@ -6,24 +6,23 @@ function renderPosts() {
     postContainer.innerHTML = "";
 
     posts.forEach((post) => {
+        // uses post.tag as a key to find tag.text
         const matchedTag = tags.find((tag) => tag.id === post.tag);
         const tagText = matchedTag ? matchedTag.text : post.tag;
 
         const postHtml = `<a href="../post.html?id=${post.id}">
         <div class="post ${post.tag}">
-            <div class="post-top-part">
-                <img
-                    class="post-image"
-                    src="img/${post.img}"
-                    alt="placeholder image"
-                    draggable="false"
-                />
-                <div class="post-title">${post.title}</div>
-                <button type="button" class="tag post-tag" id="${post.tag}">
-                    ${tagText}
-                </button>
+            <img
+                class="post-image"
+                src="img/${post.img}"
+                alt="placeholder image"
+                draggable="false"
+            />
+            <div class="post-bottom-part">
+                <p><span class="post-title">${post.title}</span>
+                <span class="post-tag">${tagText}</span><p>
+                <span class="post-description">${post.description}</span>
             </div>
-            <div class="post-bottom-part">${post.description}</div>
         </div></a>`;
 
         postContainer.insertAdjacentHTML("afterbegin", postHtml);
@@ -47,11 +46,11 @@ function renderTags() {
     checkShowMoreButton();
 }
 
+// checks if the tag section can fit every tag, if not then adds the expand (arrow) button
 function checkShowMoreButton() {
     const navContainer = document.getElementById("nav-container");
-    const showMoreButton = document.getElementById("show-more");
 
-    if (navContainer.scrollHeight > navContainer.clientHeight) {
+    if (navContainer.scrollHeight > 1.2 * navContainer.clientHeight) {
         navContainer.classList.add("show-more-visible");
     } else {
         navContainer.classList.remove("show-more-visible");
@@ -62,7 +61,8 @@ function filterPosts(tag) {
     const posts = document.querySelectorAll(".post");
 
     posts.forEach((post) => {
-        if (tag === "tag-active") {
+        // if tag was already active, remove the filter
+        if (tag === "tag-already-active") {
             post.classList.remove("hidden");
         } else {
             if (post.classList.contains(tag)) {
@@ -74,9 +74,7 @@ function filterPosts(tag) {
     });
 }
 
-renderPosts();
-renderTags();
-
+// makes sure that only one tag is active at the time
 function toggleNavbarTag(tagId) {
     document.querySelectorAll(`#nav-container .tag`).forEach((navTag) => {
         if (navTag.id === tagId) {
@@ -87,6 +85,9 @@ function toggleNavbarTag(tagId) {
     });
 }
 
+renderPosts();
+renderTags();
+
 document
     .querySelector("#nav-container")
     .addEventListener("click", function (event) {
@@ -96,7 +97,7 @@ document
             if (event.target.classList.contains("tag-active")) {
                 filterPosts(event.target.id);
             } else {
-                filterPosts("tag-active");
+                filterPosts("tag-already-active");
             }
         }
     });

@@ -18,7 +18,7 @@ export const posts = [
     },
     {
         id: 3,
-        title: "Test title2",
+        title: "Something Something",
         img: "placeholder.jpg",
         tag: "tag-raid-guides2",
         description:
@@ -43,6 +43,51 @@ export const posts = [
             "This one's gotta be longer vubky hhiaadulfd sgkhawufhbk sjaufhbkdj ufhvujod hfbvk uo",
         content: "foo",
     },
+    {
+        id: 6,
+        title: "Test title2",
+        img: "placeholder.jpg",
+        tag: "tag-raid-guides",
+        description:
+            "This one's gotta be longer vubky hhiaadulfd sgkhawufhbk sjaufhbkdj ufhvujod hfbvk uo",
+        content: "foo",
+    },
+    {
+        id: 7,
+        title: "Test title2",
+        img: "placeholder.jpg",
+        tag: "tag-raid-guides",
+        description:
+            "This one's gotta be longer vubky hhiaadulfd sgkhawufhbk sjaufhbkdj ufhvujod hfbvk uo",
+        content: "foo",
+    },
+    {
+        id: 8,
+        title: "Test title2",
+        img: "placeholder.jpg",
+        tag: "tag-raid-guides",
+        description:
+            "This one's gotta be longer vubky hhiaadulfd sgkhawufhbk sjaufhbkdj ufhvujod hfbvk uo",
+        content: "foo",
+    },
+    {
+        id: 9,
+        title: "Test title2",
+        img: "placeholder.jpg",
+        tag: "tag-raid-guides",
+        description:
+            "This one's gotta be longer vubky hhiaadulfd sgkhawufhbk sjaufhbkdj ufhvujod hfbvk uo",
+        content: "foo",
+    },
+    {
+        id: 10,
+        title: "Test title2",
+        img: "placeholder.jpg",
+        tag: "tag-raid-guides",
+        description:
+            "This one's gotta be longer vubky hhiaadulfd sgkhawufhbk sjaufhbkdj ufhvujod hfbvk uo",
+        content: "foo",
+    },
 ];
 
 export const tags = [
@@ -55,15 +100,15 @@ export const tags = [
         id: "tag-builds",
     },
     {
-        text: "Raid guides",
+        text: "Raid",
         id: "tag-raid-guides",
     },
     {
-        text: "Raid guides",
+        text: "Raid",
         id: "tag-raid-guides2",
     },
     {
-        text: "Raid guides",
+        text: "Raids",
         id: "tag-raid-guides3",
     },
     {
