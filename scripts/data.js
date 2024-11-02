@@ -20,7 +20,7 @@ export const posts = [
         id: 3,
         title: "Test title2",
         img: "placeholder.jpg",
-        tag: "tag-raid-guides",
+        tag: "tag-raid-guides2",
         description:
             "This one's gotta be longer vubky hhiaadulfd sgkhawufhbk sjaufhbkdj ufhvujod hfbvk uo",
         content: "foo",
@@ -29,7 +29,7 @@ export const posts = [
         id: 4,
         title: "Test title2",
         img: "placeholder.jpg",
-        tag: "tag-raid-guides",
+        tag: "tag-raid-guides3",
         description:
             "This one's gotta be longer vubky hhiaadulfd sgkhawufhbk sjaufhbkdj ufhvujod hfbvk uo",
         content: "foo",
@@ -57,5 +57,17 @@ export const tags = [
     {
         text: "Raid guides",
         id: "tag-raid-guides",
+    },
+    {
+        text: "Raid guides",
+        id: "tag-raid-guides2",
+    },
+    {
+        text: "Raid guides",
+        id: "tag-raid-guides3",
+    },
+    {
+        text: "Raid guides",
+        id: "tag-raid-guides4",
     },
 ];
