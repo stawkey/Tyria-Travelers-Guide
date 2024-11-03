@@ -3,16 +3,32 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Post Content</title>
+        <title>Tyria Traveler's Guide</title>
+        <link rel="stylesheet" href="style.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+            rel="stylesheet"
+        />
+        <script src="scripts/header.js" defer type="module"></script>
+        <script type="module" src="scripts/postContent.js"></script>
     </head>
     <body>
+        <header>
+            <h1>
+                Tyria
+                <span class="travelers">Traveler's</span>
+                <span class="guide">Guide</span>
+            </h1>
+            <nav>
+                <div id="nav-container"></div>
+            </nav>
+        </header>
+
         <main>
             <div id="post-container">
-                <h1 id="post-title"></h1>
-                <img id="post-image" alt="Post Image" style="width: 50vw" />
-                <p id="post-description"></p>
+                <h2 id="post-title"></h2>
+                <p id="post-content"></p>
             </div>
         </main>
-        <script type="module" src="scripts/postContent.js"></script>
     </body>
 </html>

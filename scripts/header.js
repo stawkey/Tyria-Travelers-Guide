@@ -1,33 +1,4 @@
-import { posts } from "./data.js";
 import { tags } from "./data.js";
-
-function renderPosts() {
-    const postContainer = document.getElementById("posts-container");
-    postContainer.innerHTML = "";
-
-    posts.forEach((post) => {
-        // uses post.tag as a key to find tag.text
-        const matchedTag = tags.find((tag) => tag.id === post.tag);
-        const tagText = matchedTag ? matchedTag.text : post.tag;
-
-        const postHtml = `<a href="../post.html?id=${post.id}">
-        <div class="post ${post.tag}">
-            <img
-                class="post-image"
-                src="img/${post.img}"
-                alt="placeholder image"
-                draggable="false"
-            />
-            <div class="post-bottom-part">
-                <p><span class="post-title">${post.title}</span>
-                <span class="post-tag">${tagText}</span><p>
-                <span class="post-description">${post.description}</span>
-            </div>
-        </div></a>`;
-
-        postContainer.insertAdjacentHTML("afterbegin", postHtml);
-    });
-}
 
 function renderTags() {
     const navContainer = document.getElementById("nav-container");
@@ -58,7 +29,7 @@ function checkShowMoreButton() {
 }
 
 function filterPosts(tag) {
-    const posts = document.querySelectorAll(".post");
+    const posts = document.querySelectorAll(".main-page-post");
 
     posts.forEach((post) => {
         // if tag was already active, remove the filter
@@ -84,8 +55,6 @@ function toggleNavbarTag(tagId) {
         }
     });
 }
-
-renderPosts();
 renderTags();
 
 document

@@ -11,11 +11,9 @@ function renderPostContent() {
 
     if (post) {
         document.getElementById("post-title").textContent = post.title;
-        document.getElementById("post-image").src = `img/${post.img}`;
-        document.getElementById("post-description").textContent =
-            post.description;
+        document.getElementById("post-content").textContent = post.content;
     } else {
-        document.getElementById("post-container").innerHTML =
+        document.getElementById("post-content-container").innerHTML =
             "<p>Post not found</p>";
     }
 }

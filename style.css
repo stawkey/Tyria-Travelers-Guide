@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    color: white;
 }
 
 a:hover,
@@ -25,25 +26,9 @@ header {
     flex-direction: column;
     align-items: center;
     background-color: #880d03;
-    color: white;
     padding-bottom: 0.75rem;
     position: relative;
     z-index: 1;
-}
-
-header::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 4rem;
-    width: 100%;
-    height: 13rem;
-    background-image: url("img/dragon.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    opacity: 0.3;
-    z-index: -1;
 }
 
 h1 {
@@ -51,7 +36,6 @@ h1 {
     font-size: 2.5rem;
     font-weight: 900;
     letter-spacing: 0.55rem;
-    padding: 1rem 2.5rem 0 1.5rem;
 }
 
 nav {
@@ -81,7 +65,6 @@ nav {
     border: none;
     font-size: 0.8125rem;
     background-color: #261d1c;
-    color: white;
     font-weight: 600;
 
     transition: background-color 0.2s ease, transform 0.2s ease,
@@ -119,10 +102,11 @@ nav {
     display: block;
 }
 
-#posts-container {
+#main-page-posts-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     row-gap: 1.2rem;
     padding-top: 1.25rem;
     width: 100vw;
@@ -130,7 +114,7 @@ nav {
     margin: 0 auto;
 }
 
-.post {
+.main-page-post {
     display: flex;
     flex-direction: column;
     max-width: calc(33.33%);
@@ -140,24 +124,23 @@ nav {
     margin: 0 0.6rem;
 }
 
-.post-image {
+.main-page-post-image {
     width: 100%;
     border-radius: 1.25rem 1.25rem 0 0;
 }
 
-.post-bottom-part {
-    color: white;
+.main-page-post-bottom-part {
     padding: 0 1rem 0 1rem;
     font-size: 1rem;
 }
 
-.post-title {
+.main-page-post-title {
     display: block;
     font-weight: 900;
     letter-spacing: 0.025rem;
 }
 
-.post-tag {
+.main-page-post-tag {
     display: block;
     font-size: 0.8rem;
     font-style: normal;
@@ -167,18 +150,87 @@ nav {
     display: none;
 }
 
-.post-description {
+.main-page-post-description {
     font-size: 0.9rem;
 }
 
-@media (max-width: 480px) {
-    .post {
+#post-container {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+
+    width: 90vw;
+    margin: 1.5rem;
+}
+
+h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    border-radius: 1.2rem;
+    background-color: #303030;
+    width: fit-content;
+}
+
+#post-content {
+    border-radius: 1.2rem;
+    font-size: 1rem;
+    padding: 0.5rem;
+    background-color: #303030;
+}
+
+@media (max-width: 680px) {
+    h1 {
+        padding: 1rem 2.5rem 0 1.5rem;
+    }
+
+    .travelers {
+        display: block;
+    }
+
+    .guide {
+        display: block;
+    }
+
+    header::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 4rem;
+        width: 100%;
+        height: 13rem;
+        background-image: url("img/dragon.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        opacity: 0.3;
+        z-index: -1;
+    }
+
+    .main-page-post {
         max-width: 90vw;
     }
 }
 
-@media (min-width: 481px) {
-    .post {
+@media (min-width: 681px) {
+    h1 {
+        padding: 1rem 1.5rem 0 1.5rem;
+    }
+
+    header::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 8rem;
+        background-image: url("img/dragon.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        opacity: 0.3;
+        z-index: -1;
+    }
+
+    .main-page-post {
         max-width: 300px;
     }
 }
