@@ -13,20 +13,27 @@
         <script src="scripts/renderPosts.js" defer type="module"></script>
     </head>
     <body>
-        <header>
-            <h1>
-                Tyria
-                <span class="travelers">Traveler's</span>
-                <span class="guide">Guide</span>
-            </h1>
-            <nav>
-                <div id="nav-container"></div>
-            </nav>
-        </header>
+        <div class="content">
+            <header>
+                <h1>
+                    Tyria
+                    <span class="travelers">Traveler's</span>
+                    <span class="guide">Guide</span>
+                </h1>
+                <nav>
+                    <div id="nav-container"></div>
+                </nav>
+                <input
+                    type="text"
+                    id="search-input"
+                    placeholder="Search posts by title..."
+                />
+            </header>
 
-        <main>
-            <div id="main-page-posts-container"></div>
-        </main>
+            <main>
+                <div id="main-page-posts-container"></div>
+            </main>
+        </div>
 
         <footer>Stanisław Strojniak</footer>
     </body>

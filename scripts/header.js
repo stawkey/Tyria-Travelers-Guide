@@ -55,6 +55,22 @@ function toggleNavbarTag(tagId) {
         }
     });
 }
+
+function filterPostsByTitle(searchText) {
+    const posts = document.querySelectorAll(".main-page-post");
+
+    posts.forEach((post) => {
+        const titleElement = post.querySelector(".main-page-post-title");
+        const title = titleElement.textContent.toLowerCase();
+
+        if (title.includes(searchText.toLowerCase())) {
+            post.classList.remove("hidden");
+        } else {
+            post.classList.add("hidden");
+        }
+    });
+}
+
 renderTags();
 
 document
@@ -77,4 +93,9 @@ document.getElementById("show-more").addEventListener("click", function () {
 
     navContainer.classList.toggle("expanded");
     arrow.classList.toggle("rotated");
+});
+
+document.getElementById("search-input").addEventListener("input", (event) => {
+    const searchText = event.target.value;
+    filterPostsByTitle(searchText);
 });

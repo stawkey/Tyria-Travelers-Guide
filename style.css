@@ -14,11 +14,18 @@ img {
     vertical-align: middle;
 }
 
+html,
+body {
+    height: 100%;
+}
+
 body {
     font-family: "Inter", sans-serif;
     margin: 0;
     background-color: #272727;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -98,6 +105,15 @@ nav {
     transform: rotate(-180deg);
 }
 
+#search-input {
+    display: flex;
+    align-items: center;
+    background-color: #261d1c;
+    border: none;
+    border-radius: 1.5rem;
+    padding: 0.25rem 0.5rem;
+}
+
 #nav-container.show-more-visible .show-more {
     display: block;
 }
@@ -111,7 +127,6 @@ nav {
     padding: 1.25rem 0;
     width: 100vw;
     max-width: 1000px;
-    min-height: 100vh;
     margin: 0 auto;
 }
 
@@ -180,12 +195,13 @@ h2 {
     background-color: #303030;
 }
 
-.post-page {
-    min-height: 95vh;
+.content {
+    flex: 1 0 auto;
 }
 
 footer {
-    height: 5vh;
+    padding: 1rem 0;
+    flex-shrink: 0;
     background-color: #880d03;
     display: flex;
     justify-content: center;
