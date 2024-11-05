@@ -14,11 +14,18 @@ img {
     vertical-align: middle;
 }
 
+html,
+body {
+    height: 100%;
+}
+
 body {
     font-family: "Inter", sans-serif;
     margin: 0;
     background-color: #272727;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -111,7 +118,6 @@ nav {
     padding: 1.25rem 0;
     width: 100vw;
     max-width: 1000px;
-    min-height: 100vh;
     margin: 0 auto;
 }
 
@@ -180,16 +186,16 @@ h2 {
     background-color: #303030;
 }
 
-.post-page {
-    min-height: 95vh;
+.content {
+    flex: 1 0 auto;
 }
 
 footer {
-    height: 5vh;
+    padding: 1rem 0;
+    flex-shrink: 0;
     background-color: #880d03;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 @media (max-width: 680px) {
