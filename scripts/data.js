@@ -82,6 +82,22 @@ export const posts = [
         description: "Understand how fractals work",
         content: "foo",
     },
+    {
+        id: 11,
+        title: "Rift hunting in a nutshell",
+        img: "rift.jpg",
+        tag: "tag-getting-started",
+        description: "Is it worth doing?",
+        content: "foo",
+    },
+    {
+        id: 12,
+        title: "The easy 3 - how to start doing strikes",
+        img: "dragons-end.jpg",
+        tag: "tag-raids",
+        description: "The 3 easiest strikes explained",
+        content: "foo",
+    },
 ];
 
 export const tags = [

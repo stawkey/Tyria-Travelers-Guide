@@ -108,9 +108,10 @@ nav {
     justify-content: center;
     align-items: center;
     row-gap: 1.2rem;
-    padding-top: 1.25rem;
+    padding: 1.25rem 0;
     width: 100vw;
     max-width: 1000px;
+    min-height: 100vh;
     margin: 0 auto;
 }
 
@@ -177,6 +178,18 @@ h2 {
     font-size: 1rem;
     padding: 0.5rem;
     background-color: #303030;
+}
+
+.post-page {
+    min-height: 95vh;
+}
+
+footer {
+    height: 5vh;
+    background-color: #880d03;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @media (max-width: 680px) {
