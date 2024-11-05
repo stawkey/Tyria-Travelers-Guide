@@ -230,6 +230,10 @@ h2 {
         z-index: -1;
     }
 
+    .post-header::before {
+        background-image: none;
+    }
+
     .main-page-post {
         max-width: 300px;
     }
