@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tyria Traveler's Guide</title>
+        <link rel="stylesheet" href="style.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+            rel="stylesheet"
+        />
+        <script type="module" src="scripts/postContent.js"></script>
+    </head>
+    <body>
+        <div class="content">
+            <a href="index.html" draggable="false">
+                <header class="post-header">
+                    <h1>
+                        Tyria
+                        <span class="travelers">Traveler's</span>
+                        <span class="guide">Guide</span>
+                    </h1>
+                </header>
+            </a>
+
+            <main>
+                <main>
+                    <div class="gallery-container">
+                        <img
+                            class="gallery-item"
+                            src="img/dhuum.jpg"
+                            alt="Dhuum"
+                        />
+                        <img
+                            class="gallery-item"
+                            src="img/dragons-end.jpg"
+                            alt="Dragon's End"
+                        />
+                        <img
+                            class="gallery-item"
+                            src="img/mounts.png"
+                            alt="Mounts"
+                        />
+                        <img
+                            class="gallery-item"
+                            src="img/placeholder.jpg"
+                            alt="Placeholder"
+                        />
+                        <img
+                            class="gallery-item"
+                            src="img/professions.jpg"
+                            alt="Professions"
+                        />
+                        <video
+                            class="gallery-item"
+                            src="img/hot.mp4"
+                            alt="HoT trailer"
+                            controls
+                            poster="img/hot-logo.jpg"
+                        ></video>
+                        <img class="gallery-item" src="img/pvp.jpg" alt="Pvp" />
+                        <img class="gallery-item" src="img/wvw.jpg" alt="WvW" />
+                    </div>
+
+                    <div id="modal-container" class="modal">
+                        <span class="modal-close">&times;</span>
+                        <img class="modal-content" id="modal-image" />
+                    </div>
+                </main>
+            </main>
+        </div>
+
+        <script>
+            const modalContainer = document.getElementById("modal-container");
+            const modalImg = document.getElementById("modal-image");
+            const closeModal =
+                document.getElementsByClassName("modal-close")[0];
+
+            document.querySelectorAll(".gallery-item").forEach((img) => {
+                img.onclick = function () {
+                    modalContainer.style.display = "flex";
+                    modalImg.src = this.src;
+                };
+            });
+
+            closeModal.onclick = function () {
+                modalContainer.style.display = "none";
+            };
+            window.onclick = function (event) {
+                if (event.target === modalContainer) {
+                    modalContainer.style.display = "none";
+                }
+            };
+        </script>
+
+        <footer>
+            <a href="gallery.html">
+                <div class="gallery-button">Gallery</div>
+            </a>
+            <p>Stanisław Strojniak</p>
+            <a href="contact.html">
+                <div class="contact-button">Contact</div>
+            </a>
+        </footer>
+    </body>
+</html>

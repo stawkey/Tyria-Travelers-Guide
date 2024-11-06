@@ -13,7 +13,7 @@ function renderPosts() {
             const matchedTag = tags.find((tag) => tag.id === post.tag);
             const tagText = matchedTag ? matchedTag.text : post.tag;
 
-            const postHtml = `<a href="../post.html?id=${post.id}">
+            const postHtml = `<a href="../Tyria-Travelers-Guide/post.html?id=${post.id}">
         <div class="main-page-post ${post.tag}">
             <img
                 class="main-page-post-image"

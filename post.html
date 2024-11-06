@@ -9,18 +9,19 @@
             href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
             rel="stylesheet"
         />
-        <script src="scripts/header.js" defer type="module"></script>
         <script type="module" src="scripts/postContent.js"></script>
     </head>
     <body>
         <div class="content">
-            <header class="post-header">
-                <h1>
-                    Tyria
-                    <span class="travelers">Traveler's</span>
-                    <span class="guide">Guide</span>
-                </h1>
-            </header>
+            <a href="index.html" draggable="false">
+                <header class="post-header">
+                    <h1>
+                        Tyria
+                        <span class="travelers">Traveler's</span>
+                        <span class="guide">Guide</span>
+                    </h1>
+                </header>
+            </a>
 
             <main>
                 <div id="post-container">
@@ -30,6 +31,14 @@
             </main>
         </div>
 
-        <footer>Stanisław Strojniak</footer>
+        <footer>
+            <a href="gallery.html">
+                <div class="gallery-button">Gallery</div>
+            </a>
+            <p>Stanisław Strojniak</p>
+            <a href="contact.html">
+                <div class="contact-button">Contact</div>
+            </a>
+        </footer>
     </body>
 </html>

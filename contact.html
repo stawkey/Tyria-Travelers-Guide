@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tyria Traveler's Guide</title>
+        <link rel="stylesheet" href="style.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+            rel="stylesheet"
+        />
+        <script type="module" src="scripts/postContent.js"></script>
+        <script>
+            function handleFormSubmit(event) {
+                event.preventDefault(); // prevents page reloading after submiting the form
+                window.location.href = "index.html";
+            }
+        </script>
+    </head>
+    <body>
+        <div class="content">
+            <a href="index.html" draggable="false">
+                <header class="post-header">
+                    <h1>
+                        Tyria
+                        <span class="travelers">Traveler's</span>
+                        <span class="guide">Guide</span>
+                    </h1>
+                </header>
+            </a>
+
+            <main>
+                <section class="contact-form-section">
+                    <h2>Contact</h2>
+                    <form
+                        class="contact-form"
+                        method="POST"
+                        onsubmit="handleFormSubmit(event)"
+                    >
+                        <label for="email">Email:</label>
+                        <input
+                            type="text"
+                            id="email"
+                            name="email"
+                            placeholder="Type your email..."
+                            required
+                            pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+                            title="Invalid email address"
+                        />
+
+                        <label for="subject">Message subject:</label>
+                        <select id="subject" name="subject" required>
+                            <option value="" disabled selected>
+                                Choose a subject
+                            </option>
+                            <option value="general">General question</option>
+                            <option value="feedback">Feedback</option>
+                            <option value="support">Support</option>
+                        </select>
+
+                        <label for="message">Message:</label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            placeholder="Type your message..."
+                            required
+                            minlength="10"
+                            maxlength="500"
+                        ></textarea>
+
+                        <input
+                            type="submit"
+                            value="Submit"
+                            class="submit-button"
+                        />
+                    </form>
+                </section>
+            </main>
+        </div>
+
+        <footer>
+            <a href="gallery.html">
+                <div class="gallery-button">Gallery</div>
+            </a>
+            <p>Stanisław Strojniak</p>
+            <a href="contact.html">
+                <div class="contact-button">Contact</div>
+            </a>
+        </footer>
+    </body>
+</html>
